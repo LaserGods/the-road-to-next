@@ -23,7 +23,7 @@ const TicketItem = ({ ticket, isDetail }: TicketItemProps) => {
 
   return (
     <div
-      className={clsx('flex w-full gap-x-2', {
+      className={clsx('flex w-full gap-x-1', {
         'max-w-[580px]': isDetail,
         'max-w-[420px]': !isDetail,
       })}
@@ -36,9 +36,16 @@ const TicketItem = ({ ticket, isDetail }: TicketItemProps) => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <span className={clsx('whitespace-break-spaces', { 'line-clamp-3': !isDetail })}>{ticket.content}</span>
+          <span
+            className={clsx('whitespace-break-spaces', {
+              'line-clamp-3': !isDetail,
+            })}
+          >
+            {ticket.content}
+          </span>
         </CardContent>
       </Card>
+
       {isDetail ? null : <div className="flex flex-col gap-y-1">{detailButton}</div>}
     </div>
   );
