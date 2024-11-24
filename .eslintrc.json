@@ -27,7 +27,7 @@
         "react/react-in-jsx-scope": "off",
         "spaced-comment": "warn",
         "quotes": ["warn", "single"],
-        "no-console": "warn",
+        "no-console": "off",
         "no-redeclare": "warn",
         "react/display-name": "error",
         "react/jsx-key": "warn",
