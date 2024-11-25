@@ -9,7 +9,7 @@ const FieldError = ({ actionState, name }: FieldErrorProps) => {
   const message = actionState.fieldErrors[name]?.[0];
 
   if (!message) return null;
-  return <span className="text-xs text-destructive">{actionState.fieldErrors.title?.[0]}</span>;
+  return <span className="text-xs text-destructive">{actionState.fieldErrors[name]?.[0]}</span>;
 };
 
 export { FieldError };
